@@ -21,6 +21,7 @@ pipeline {
     stage('Deployment') {
       steps {
         echo 'Code deployed to QA env'
+        input(message: 'Do you want to deploy ?', id: 'ok')
       }
     }
 
